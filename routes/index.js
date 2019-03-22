@@ -9,7 +9,11 @@ router.get('/', (req, res) => {
     cool: true
   };
   //res.send('Hey! It works!');
-  res.json(req.query);
+  //res.json(req.query);
+  res.render('hello', {
+    name: 'Wes',
+    dog: req.query.dog
+  });
 });
 
 router.get('/reverse/:name', (req, res) => {
